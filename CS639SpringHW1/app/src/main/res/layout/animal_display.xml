@@ -57,7 +57,7 @@
         android:layout_toEndOf="@id/dogImage"
         android:text="@string/stringDogText" />
 
-    <TextView
+    <Button
         android:id="@+id/redButton"
         android:layout_width="50dp"
         android:layout_height="50dp"
@@ -66,7 +66,7 @@
         android:layout_toStartOf="@id/orangeButton"
         android:background="#F44336" />
 
-    <TextView
+    <Button
         android:id="@+id/orangeButton"
         android:layout_width="50dp"
         android:layout_height="50dp"
@@ -75,7 +75,7 @@
         android:layout_toStartOf="@id/yellowButton"
         android:background="#FF9800" />
 
-    <TextView
+    <Button
         android:id="@+id/yellowButton"
         android:layout_width="50dp"
         android:layout_height="50dp"
@@ -84,7 +84,7 @@
         android:background="#FFEB3B" />
     <!-- Make the yellow button to be center, and other buttons margin it. -->
 
-    <TextView
+    <Button
         android:id="@+id/blueButton"
         android:layout_width="50dp"
         android:layout_height="50dp"
@@ -93,7 +93,7 @@
         android:layout_toEndOf="@id/yellowButton"
         android:background="#2196F3" />
 
-    <TextView
+    <Button
         android:id="@+id/greenButton"
         android:layout_width="50dp"
         android:layout_height="50dp"
