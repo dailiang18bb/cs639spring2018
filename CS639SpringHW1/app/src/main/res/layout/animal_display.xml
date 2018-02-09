@@ -1,9 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
-        android:text="Start editing this file"/>
+        android:text="Fun Facts" />
+
+
+    <ImageView
+        android:id="@+id/birdImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bird" />
+
+    <ImageView
+        android:id="@+id/catImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/birdImage"
+        android:src="@drawable/cat" />
+
+    <ImageView
+        android:id="@+id/dogImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/catImage"
+        android:src="@drawable/dog" />
+
+
+    <TextView
+        android:id="@+id/birdText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/birdImage"
+        android:text="@string/stringBirdText" />
+
+    <TextView
+        android:id="@+id/catText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/birdText"
+        android:layout_toEndOf="@id/catImage"
+        android:text="@string/stringCatText" />
+
+    <TextView
+        android:id="@+id/dogText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/catText"
+        android:layout_toEndOf="@id/dogImage"
+        android:text="@string/stringDogText" />
+
+
 </RelativeLayout>
