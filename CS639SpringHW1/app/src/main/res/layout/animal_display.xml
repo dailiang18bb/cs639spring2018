@@ -1,19 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:text="Fun Facts" />
-
+    android:layout_height="match_parent"
+    android:padding="16dp">
 
     <ImageView
         android:id="@+id/birdImage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="16dp"
         android:src="@drawable/bird" />
 
     <ImageView
@@ -21,6 +17,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/birdImage"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="16dp"
         android:src="@drawable/cat" />
 
     <ImageView
@@ -28,13 +26,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/catImage"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="16dp"
         android:src="@drawable/dog" />
-
 
     <TextView
         android:id="@+id/birdText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignTop="@id/birdImage"
+        android:layout_marginLeft="16dp"
         android:layout_toEndOf="@id/birdImage"
         android:text="@string/stringBirdText" />
 
@@ -42,7 +43,8 @@
         android:id="@+id/catText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/birdText"
+        android:layout_alignTop="@id/catImage"
+        android:layout_marginLeft="16dp"
         android:layout_toEndOf="@id/catImage"
         android:text="@string/stringCatText" />
 
@@ -50,9 +52,54 @@
         android:id="@+id/dogText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/catText"
+        android:layout_alignTop="@id/dogImage"
+        android:layout_marginLeft="16dp"
         android:layout_toEndOf="@id/dogImage"
         android:text="@string/stringDogText" />
 
+    <TextView
+        android:id="@+id/redButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="10dp"
+        android:layout_toStartOf="@id/orangeButton"
+        android:background="#F44336" />
+
+    <TextView
+        android:id="@+id/orangeButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="10dp"
+        android:layout_toStartOf="@id/yellowButton"
+        android:background="#FF9800" />
+
+    <TextView
+        android:id="@+id/yellowButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:background="#FFEB3B" />
+    <!-- Make the yellow button to be center, and other buttons margin it. -->
+
+    <TextView
+        android:id="@+id/blueButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@id/yellowButton"
+        android:background="#2196F3" />
+
+    <TextView
+        android:id="@+id/greenButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@id/blueButton"
+        android:background="#4CAF50" />
 
 </RelativeLayout>
