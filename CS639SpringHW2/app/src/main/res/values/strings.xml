@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">CS639SpringHW1</string>
+    <string name="app_name">CS639SpringHW2</string>
 
     <string name="bird_description">This is a bird. It can usually be found flying or looking for worms in the first</string>
     <string name="cat_description">This is a cat. They are big fans of milk and yarn. They do not like water and also don\'t like when you touch their tails.</string>

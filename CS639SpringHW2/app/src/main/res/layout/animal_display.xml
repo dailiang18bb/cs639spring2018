@@ -79,6 +79,19 @@
             android:layout_toEndOf="@+id/dog"
             android:text="@string/dog_description"
             android:visibility="invisible" />
+        <Button
+            android:id="@+id/id_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="next fact"
+            android:layout_alignParentRight="true"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="delete fact"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/id_next"/>
+
 
     </RelativeLayout>
 
