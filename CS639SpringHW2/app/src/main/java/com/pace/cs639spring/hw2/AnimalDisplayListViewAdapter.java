@@ -1,4 +1,4 @@
-package com.pace.cs639spring.hw2.cs639springhw2;
+package com.pace.cs639spring.hw2;
 
 import android.view.View;
 import android.view.ViewGroup;
