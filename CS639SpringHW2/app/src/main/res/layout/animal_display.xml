@@ -4,105 +4,113 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <RelativeLayout
+
+    <ListView
+        android:id="@android:id/list"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:padding="5dp">
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
 
-        <ImageView
-            android:id="@+id/bird"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_centerVertical="true"
-            android:layout_marginEnd="5dp"
-            android:scaleType="fitCenter"
-            android:src="@drawable/ic_bird" />
 
-        <TextView
-            android:id="@+id/bird_description"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_toEndOf="@+id/bird"
-            android:text="@string/bird_description_1"
-            android:visibility="invisible" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:padding="5dp">
 
-    </RelativeLayout>
+            <ImageView
+                android:id="@+id/bird"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="5dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_bird" />
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:padding="5dp">
-
-        <ImageView
-            android:id="@+id/cat"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_centerVertical="true"
-            android:layout_marginEnd="5dp"
-            android:scaleType="fitCenter"
-            android:src="@drawable/ic_cat" />
-
-        <TextView
-            android:id="@+id/cat_description"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_toEndOf="@+id/cat"
-            android:text="@string/cat_description_1"
-            android:visibility="invisible" />
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:padding="5dp">
-
-        <ImageView
-            android:id="@+id/dog"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_centerVertical="true"
-            android:layout_marginEnd="5dp"
-            android:scaleType="fitCenter"
-            android:src="@drawable/ic_dog" />
-
-        <TextView
-            android:id="@+id/dog_description"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_toEndOf="@+id/dog"
-            android:text="@string/dog_description_1"
-            android:visibility="invisible" />
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:orientation="vertical">
-
-            <Button
-                android:id="@+id/next_button"
+            <TextView
+                android:id="@+id/bird_description"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="next fact" />
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/bird"
+                android:visibility="invisible" />
 
-            <Button
-                android:id="@+id/delete_button"
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:padding="5dp">
+
+            <ImageView
+                android:id="@+id/cat"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="5dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_cat" />
+
+            <TextView
+                android:id="@+id/cat_description"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="delete fact" />
-        </LinearLayout>
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/cat"
+                android:visibility="invisible" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:padding="5dp">
+
+            <ImageView
+                android:id="@+id/dog"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="5dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_dog" />
+
+            <TextView
+                android:id="@+id/dog_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/dog"
+                android:visibility="invisible" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/next_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="next fact" />
+
+                <Button
+                    android:id="@+id/delete_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="delete fact" />
+            </LinearLayout>
 
 
-    </RelativeLayout>
+        </RelativeLayout>
+
+    </ListView>
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -114,8 +122,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="3"
-            android:inputType="text|textAutoComplete|textAutoCorrect|textCapSentences"
-            android:imeOptions="actionGo"/>
+            android:imeOptions="actionGo"
+            android:inputType="text|textAutoComplete|textAutoCorrect|textCapSentences" />
 
         <Button
             android:layout_width="0dp"
