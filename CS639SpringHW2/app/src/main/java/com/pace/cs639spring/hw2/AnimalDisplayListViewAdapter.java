@@ -2,6 +2,7 @@ package com.pace.cs639spring.hw2;
 
 import android.content.Context;
 import android.content.res.Resources;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -61,73 +62,18 @@ public class AnimalDisplayListViewAdapter extends BaseAdapter {
 
         /*
         * 1. get the root view.
-        *
+        * 2. other view
+        * 3. value
         *
         *
         *
         */
 
-
-
+        LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(mContext.LAYOUT_INFLATER_SERVICE);
+        View row = inflater.inflate(R.layout., )
 
 
 
         return null;
-    }
-}
-
-
-public class TestAdapter extends BaseAdapter {
-
-    Context mContext;
-    List<ExampleObject> mExamples;
-
-    TestAdapter(Context context, List<ExampleObject> exampleObjectList) {
-        mContext = context;
-        mExamples = exampleObjectList;
-    }
-
-
-    @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
-        if (convertView == null) {
-            convertView = View.inflate(mContext, R.layout.list_item, null);
-            ViewHolder viewHolder = new ViewHolder((ImageView) convertView.findViewById(R.id.image),
-                    (TextView) convertView.findViewById(R.id.text));
-            convertView.setTag(viewHolder);
-        }
-
-        ExampleObject object = (ExampleObject) getItem(position);
-        ViewHolder viewHolder = (ViewHolder) convertView.getTag();
-
-        viewHolder.mImageView.setBackgroundColor(object.mColor);
-        viewHolder.mTextView.setText(object.mName);
-        return convertView;
-    }
-
-    @Override
-    public int getCount() {
-        return mExamples.size();
-    }
-
-    @Override
-    public Object getItem(int position) {
-        return mExamples.get(position);
-    }
-
-    @Override
-    public long getItemId(int position) {
-        return 0;
-    }
-
-    static class ViewHolder {
-        ImageView mImageView;
-        TextView mTextView;
-
-        ViewHolder(ImageView imageView, TextView textView) {
-            mImageView = imageView;
-            mTextView = textView;
-        }
-
     }
 }
