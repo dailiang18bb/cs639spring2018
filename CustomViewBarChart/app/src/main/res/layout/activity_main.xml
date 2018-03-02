@@ -3,10 +3,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <com.example.android.customviewbarchart.CharlesView
+        android:id="@+id/charles_view"
+        android:layout_width="match_parent"
+        android:layout_height="300dp" />
+
+
     <LinearLayout
         android:id="@+id/layout_date"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/charles_view"
         android:orientation="horizontal">
 
         <TextView
