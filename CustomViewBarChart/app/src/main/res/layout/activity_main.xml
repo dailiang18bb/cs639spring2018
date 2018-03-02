@@ -30,7 +30,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="55"
-            android:hint="XX/XX/XXXX"
+            android:hint="XX/XX"
             android:inputType="date" />
 
     </LinearLayout>
