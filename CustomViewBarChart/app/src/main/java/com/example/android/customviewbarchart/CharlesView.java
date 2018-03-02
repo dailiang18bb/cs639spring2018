@@ -23,32 +23,28 @@ public class CharlesView extends View {
     private Paint mPaintAxis = new Paint();
     private Paint mPaintText = new Paint();
     private Paint mPaintTop = new Paint();
-    String topValue = "0";
+    String topValue = "";
     ArrayList<Integer> countList = new ArrayList<Integer>();
     ArrayList<String> dateList = new ArrayList<String>();
-
 
     public CharlesView(Context context) {
         super(context);
         init();
     }
 
-
     private void init() {
 
         mPaintRect.setColor(Color.GRAY);
         mPaintAxis.setColor(Color.BLACK);
-        mPaintText.setTextSize(16 * getResources().getDisplayMetrics().density);
+        mPaintText.setTextSize(dpToPx(12));
         mPaintText.setColor(Color.BLACK);
         mPaintTop.setColor(Color.BLUE);
-        countList.add(20);
-        countList.add(50);
-        dateList.add("02/24");
-        dateList.add("04/05");
 
-
+//        countList.add(20);
+//        countList.add(50);
+//        dateList.add("02/24");
+//        dateList.add("04/05");
     }
-
 
     //override the onDraw method
     @Override
@@ -67,38 +63,33 @@ public class CharlesView extends View {
                 // get the top value
                 topValue = Integer.toString(Collections.max(countList));
                 if (countList.get(i) == Collections.max(countList)) {
-                    //top value
+                    //top value rect color blue
                     canvas.drawRect(80 * (i + 1) + 30 * i, 50, 80 * (i + 1) + 30 * i + 80, getHeight() - 50, mPaintTop);
                     canvas.drawText(dateList.get(i), 80 * (i + 1) + 30 * i, getHeight() - 20, mPaintText);
 
                 } else {
-                    //other value
-                    canvas.drawRect(80 * (i + 1) + 30 * i, getHeight()-(countList.get(i) * (getHeight() - 100) / Collections.max(countList)), 80 * (i + 1) + 30 * i + 80, getHeight() - 50, mPaintRect);
+                    //other value rect color gray
+                    canvas.drawRect(80 * (i + 1) + 30 * i, getHeight() - (countList.get(i) * (getHeight() - 100) / Collections.max(countList)), 80 * (i + 1) + 30 * i + 80, getHeight() - 50, mPaintRect);
                     canvas.drawText(dateList.get(i), 80 * (i + 1) + 30 * i, getHeight() - 20, mPaintText);
                 }
             } else {
+                topValue = Integer.toString(countList.get(i));
                 canvas.drawRect(80 * (i + 1) + 30 * i, 50, 80 * (i + 1) + 30 * i + 80, getHeight() - 50, mPaintTop);
                 canvas.drawText(dateList.get(i), 80 * (i + 1) + 30 * i, getHeight() - 20, mPaintText);
             }
-
-
         }
-
     }
-
 
     public CharlesView(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
         init();
     }
 
-    public void add() {
-        //dateList.add(findViewById(R.id.date_input));
-        //countList.add();
-
-
+    //add data to ArrayList
+    public void add(String date, int count) {
+        dateList.add(date);
+        countList.add(count);
     }
-
 
     private static int dpToPx(int dpValue) {
         return (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dpValue, Resources.getSystem().getDisplayMetrics());
