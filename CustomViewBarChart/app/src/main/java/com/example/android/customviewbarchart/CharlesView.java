@@ -78,6 +78,8 @@ public class CharlesView extends View {
                 canvas.drawText(dateList.get(i), 80 * (i + 1) + 30 * i, getHeight() - 20, mPaintText);
             }
         }
+        //redraw graph
+        invalidate();
     }
 
     public CharlesView(Context context, @Nullable AttributeSet attrs) {
