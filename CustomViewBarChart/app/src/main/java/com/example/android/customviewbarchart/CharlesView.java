@@ -36,6 +36,7 @@ public class CharlesView extends View {
 
         mPaintRect.setColor(Color.GRAY);
         mPaintAxis.setColor(Color.BLACK);
+        mPaintAxis.setStrokeWidth(5);
         mPaintText.setTextSize(dpToPx(12));
         mPaintText.setColor(Color.BLACK);
         mPaintTop.setColor(Color.BLUE);
@@ -78,8 +79,7 @@ public class CharlesView extends View {
                 canvas.drawText(dateList.get(i), 80 * (i + 1) + 30 * i, getHeight() - 20, mPaintText);
             }
         }
-        //redraw graph
-        invalidate();
+
     }
 
     public CharlesView(Context context, @Nullable AttributeSet attrs) {
@@ -91,6 +91,9 @@ public class CharlesView extends View {
     public void add(String date, int count) {
         dateList.add(date);
         countList.add(count);
+
+        //redraw graph
+        invalidate();
     }
 
     private static int dpToPx(int dpValue) {
