@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ActivityAndFragmentTransitionExamples</string>
+    <string name="say_hi">Say Hi!</string>
+    <string name="message_cannot_be_empty">Message cannot be empty</string>
+    <string name="hello_person">Hello, %s</string>
+    <string name="back">Back</string>
+</resources>
